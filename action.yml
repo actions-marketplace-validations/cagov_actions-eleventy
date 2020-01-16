@@ -1,6 +1,6 @@
 name: 'Eleventy Action Plus RSS'
-description: 'Build your Eleventy-based static website'
-author: 'Sy Brand'
+description: 'Build your Eleventy-based static website plus RSS'
+author: 'Sy Brand && California'
 inputs: 
   args:
     description: 'Arguments to pass to the Eleventy invocation'
@@ -8,3 +8,6 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  icon: hexagon
+  color: black
