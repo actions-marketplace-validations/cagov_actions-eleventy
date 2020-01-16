@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running eleventy"
-eleventy $INPUT_ARGS
+npm install @11ty/eleventy-plugin-rss && eleventy $INPUT_ARGS
