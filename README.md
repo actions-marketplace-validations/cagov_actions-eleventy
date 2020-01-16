@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        uses: cagov/actions-eleventy@v1.2
+        uses: cagov/actions-eleventy@v1.3.1
         with:
           args: --formats=html,njk --input ./posts
       - name: Deploy
@@ -29,3 +29,6 @@ jobs:
 ```
 
 You can pass additional arguments to `eleventy` through the `args` option:
+
+
+<img src="https://cwds.dev/docs/4.3/assets/img/bear-logo.png">
