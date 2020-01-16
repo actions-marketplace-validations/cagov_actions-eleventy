@@ -1,4 +1,4 @@
-name: 'Eleventy Action'
+name: 'Eleventy Action Plus RSS'
 description: 'Build your Eleventy-based static website'
 author: 'Sy Brand'
 inputs: 
