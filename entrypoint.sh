@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Running eleventy"
-npm install @11ty/eleventy-plugin-rss && eleventy $INPUT_ARGS
+echo "npm installing, building and running eleventy"
+npm install && npm run build && eleventy $INPUT_ARGS
