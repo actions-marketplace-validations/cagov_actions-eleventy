@@ -3,14 +3,17 @@ on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build
-        uses: TartanLlama/actions-eleventy@master
+      - name: Build 11ty
+        uses: cagov/actions-eleventy@3.0	
+        with:	
+          args: build:staging && eleventy --formats=html,njk --input ./pages --output ./docs	
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
           PUBLISH_DIR: _site 
           PUBLISH_BRANCH: gh-pages
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          

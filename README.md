@@ -9,18 +9,18 @@ To use it, create a `.github/workflows/eleventy_build.yml` file which [uses this
 Here's an example which builds the site with this action, then deploys to GitHub Pages with [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages):
 
 ```yaml
-name: Eleventy Build
+name: Test Build
 on: [push]
 
 jobs:
-  build_deploy:
-    runs-on: ubuntu-18.04
+  test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build
-        uses: cagov/actions-eleventy@v1.3.1
-        with:
-          args: --formats=html,njk --input ./posts
+      - name: Build 11ty
+        uses: cagov/actions-eleventy@3.0	
+        with:	
+          args: build:staging && eleventy --formats=html,njk --input ./pages --output ./docs	
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:

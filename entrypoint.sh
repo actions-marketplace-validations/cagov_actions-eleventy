@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "npm installing, building and running eleventy"
-npm install && npm run build && eleventy $INPUT_ARGS
+npm install && npm run $INPUT_ARGS
