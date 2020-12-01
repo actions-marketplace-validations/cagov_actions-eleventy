@@ -18,9 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build 11ty
-        uses: cagov/actions-eleventy@3.0	
+        uses: cagov/actions-eleventy@3.1
         with:	
-          args: build:staging && eleventy --formats=html,njk --input ./pages --output ./docs	
+          build_task: build:staging 
+          build_eleventy_args: --formats=html,njk --input ./pages --output ./docs	
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
